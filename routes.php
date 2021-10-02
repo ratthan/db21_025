@@ -1,17 +1,21 @@
 <?php 
-$controllers=array('pages'=>['home','error']);
+$controllers=array('pages'=>['home','error'],'productPrices'=>['index']);
 function call($controller,$action){
-   require_once("controllers/".$controller."_controller.php");
+   require_once("controllers/".$controller."Controller.php");
    switch($controller)
    {
-        case "pages": $controller = new PagesController();
+        case "pages": $controller = new pagesController();
         break;
 
+        case "productPrices": require_once("models/productPriceModel.php");
+                              $controller = new productPriceController();                    
+        break;
 
    }
    $controller->{$action}();
 
 }
+
 
 if(array_key_exists($controller,$controllers)){
     if(in_array($action,$controllers[$controller] )){
