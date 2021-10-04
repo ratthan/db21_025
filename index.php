@@ -10,9 +10,9 @@ if(isset($_GET['controller'])&&isset($_GET['action'])){
 <head></head>
 <body>
     <?php echo "controller = ".$controller.", action = ".$action;  ?>
-    <br>[<a href="">HOME</a>]<br>
-    [<a href="?controller=productPrices&action=index">PRODUCTPRICE</a>]<br>
-    [<a href="?controller=quotationDetails&action=index">QUOTATIONDETAIL</a>]<br>
+    <br>[<a href="?controller=pages&action=home">HOME</a>]<br>
+    [<a href="?controller=productxProductPrices&action=index">RATE</a>]<br>
+    [<a href="?controller=quotationDetailxQxPxPCs&action=index">QUOTATIONDETAIL</a>]<br>
     <?php require_once("routes.php");?>
 </body>
 </html>

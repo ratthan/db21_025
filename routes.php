@@ -1,23 +1,26 @@
 <?php 
-$controllers=array('pages'=>['home','error'],'productPrices'=>['index','search'],'quotationDetails'=>['index']);
+$controllers=array('pages'=>['home','error'],
+'productxProductPrices'=>['index','search','new','addProductPrice','updateForm','updateProductPrice','deleteForm','deleteProductPrice'],
+'quotationDetailxQxPxPCs'=>['index','search','new']);
 function call($controller,$action){
-    echo "aaa";
-   require_once("controllers/".$controller."Controller.php");
-   echo "bbb";
+   require_once("controllers/".$controller."Controller.php");//เปิดไฟล์controller
    switch($controller)
    {
         case "pages": $controller = new pagesController();
         break;
 
-        case "productPrices": require_once("models/productPriceModel.php");
-                              $controller = new productPriceController();      
+        case "productxProductPrices": require_once("models/productxProductPriceModel.php");
+                                      require_once("models/productModel.php");
+                                      require_once("models/productPriceModel.php");                                  
+                                      $controller = new productxProductPriceController();      
         break;
 
-        case "quotationDetails": echo "111";
-                                 require_once("models/quotationDetailModel.php");
-                                 echo "222";
-                                 $controller = new quotationDetailController();
-                                 echo "333";      
+        case "quotationDetailxQxPxPCs": echo "111";
+                                        require_once("models/quotationDetailxQxPxPCModel.php");
+                                        //require_once("models/quotationDetailModel.php");
+                                        echo "222";
+                                        $controller = new quotationDetailxQxPxPCController();
+                                        echo "333";      
         break;
 
    }
