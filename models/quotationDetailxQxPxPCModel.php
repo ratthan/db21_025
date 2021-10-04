@@ -86,7 +86,6 @@ public static function search($key){
         $result = $conn->query($sql);
         echo "4444";
 
-
         while($my_row = $result->fetch_assoc()){
                 echo "ei";
                 $Q_id = $my_row[Q_id];

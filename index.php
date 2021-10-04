@@ -11,8 +11,10 @@ if(isset($_GET['controller'])&&isset($_GET['action'])){
 <body>
     <?php echo "controller = ".$controller.", action = ".$action;  ?>
     <br>[<a href="?controller=pages&action=home">HOME</a>]<br>
-    [<a href="?controller=productxProductPrices&action=index">RATE</a>]<br>
+    [<a href="?controller=quotationxCxEs&action=index">QUOTATION</a>]<br>
     [<a href="?controller=quotationDetailxQxPxPCs&action=index">QUOTATIONDETAIL</a>]<br>
+    [<a href="?controller=productxProductPrices&action=index">RATE</a>]<br>
+    
     <?php require_once("routes.php");?>
 </body>
 </html>

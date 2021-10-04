@@ -38,7 +38,7 @@ public static function getAll(){
 
 public static function add($P_id,$PP_id,$PP_qty,$PP_price,$PP_screen){
     require("connectionConnect.php");
-    echo $P_id."-".$PP_id."-".$PP_qty."-".$PP_price."-".$PP_screen."<br>";
+    //echo $P_id."-".$PP_id."-".$PP_qty."-".$PP_price."-".$PP_screen."<br>";
     $sql = "INSERT INTO ProductPrice(PP_id,P_id,PP_price,PP_qty,PP_screen) VALUES('$PP_id','$P_id','$PP_price','$PP_qty','$PP_screen')";
     $result = $conn->query($sql);
     require("connectionClose.php");
