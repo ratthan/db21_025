@@ -1,4 +1,4 @@
-new productprice <a href="?controller=quotationDetailxQxPxPCs&action=new">click</a><br>
+new QuotationDetail <a href="?controller=quotationDetailxQxPxPCs&action=new">click</a><br>
 
 <form method = "get" action = "">
     <input type="text" name="key">
@@ -32,8 +32,8 @@ new productprice <a href="?controller=quotationDetailxQxPxPCs&action=new">click<
         <td>$quotationDetailxQxPxPC->quotationdetail_numscreen</td>
         <td>$quotationDetailxQxPxPC->price</td>
         <td>$quotationDetailxQxPxPC->total</td>
-        <td>update</td>
-        <td>delete</td>
+        <td><a href=?controller=quotationDetailxQxPxPCs&action=updateForm&QD_id=$quotationDetailxQxPxPCs->quotationdetail_id> update </a></td>
+        <td><a href=?controller=quotationDetailxQxPxPCs&action=deleteForm&QD_id=$quotationDetailxQxPxPCs->quotationdetail_id> delete </a></td>
         </tr>";
     }
 

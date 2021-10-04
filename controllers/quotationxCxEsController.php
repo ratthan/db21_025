@@ -6,13 +6,6 @@ class quotationxCxEController
         require_once('views/quotationxCxE/indexQuotationxCxE.php');
     }
 
-
-    public function search(){
-        $key = $_GET['key'];
-        $quotationxCxEList = quotationxCxE::search($key);
-        require_once('views/quotationxCxE/indexQuotationxCxE.php');
-     }
-
     /*
     public function newQuotation()
     {
@@ -78,4 +71,12 @@ class quotationxCxEController
     }
 
     */
+    public function deleteForm()
+    {
+        
+        $Q_id = $_GET['Q_id'];
+        $quotation = quotation::get($Q_id);
+        echo "f";
+        require_once("views/quotationxCxE/deleteFormQuotation.php");
+    }
 }

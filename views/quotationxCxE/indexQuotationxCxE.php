@@ -29,9 +29,8 @@ new quotation <a href="?controller=quotationxCxEs&action=new">click</a><br>
         <td>$quotationxCxE->customer_address</td>
         <td>$quotationxCxE->customer_phone</td>
         <td>$quotationxCxE->employee_name</td>
-
-        <td>update</td>
-        <td>delete</td>
+        <td><a href=?controller=quotationxCxEs&action=updateForm&PP_id=$quotationxCxE->quotation_id> update </a></td>
+        <td><a href=?controller=quotationxCxEs&action=deleteForm&PP_id=$quotationxCxE->quotation_id> delete </a></td>
         </tr>";
     }
 

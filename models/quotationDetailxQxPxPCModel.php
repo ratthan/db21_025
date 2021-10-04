@@ -26,7 +26,7 @@ public function __construct($quotation_id, $product_id, $product_name, $productc
 
 public static function getTable(){
         $quotationDetailxQxPxPCList = [];
-        echo "aaa";
+        //echo "aaa";
         require("connectionConnect.php");
         $sql = "SELECT A.Q_id , A.P_id ,Product.P_name, A.PC_color , A.QD_qty, A.QD_numscreen , (ProductPrice.PP_price +
         ProductPrice.PP_screen*(A.QD_numscreen-1)) AS price ,((ProductPrice.PP_price +
@@ -43,7 +43,7 @@ public static function getTable(){
         ProductPrice.PP_qty
         ORDER BY A.Q_id";
         $result= $conn->query($sql);
-        echo "ccc";
+        //echo "ccc";
         while($my_row = $result->fetch_assoc()){
                 $Q_id = $my_row[Q_id];
                 $P_id = $my_row[P_id];
@@ -53,7 +53,7 @@ public static function getTable(){
                 $QD_numscreen = $my_row[QD_numscreen];
                 $price = $my_row[price];
                 $total = $my_row[total];
-                echo $Q_id."-".$P_id."-".$P_name."-".$PC_color."-".$QD_qty."-".$QD_numscreen."-".$price."-".$total."<br>";
+                //echo $Q_id."-".$P_id."-".$P_name."-".$PC_color."-".$QD_qty."-".$QD_numscreen."-".$price."-".$total."<br>";
                 $quotationDetailxQxPxPCList[] = new quotationDetailxQxPxPC($Q_id,$P_id,$P_name,$PC_color,$QD_qty,$QD_numscreen,$price,$total);
         }
         require("connectionClose.php");

@@ -1,0 +1,13 @@
+
+<?php echo "<br> Are your sure to DELETE this Quotation <br>
+            <br> ID:$quotationxCxE->quotation_id         DATE:$quotationxCxE->quotation_date 
+                 NAME::$quotationxCxE->customer_name     ADDRESS:$quotationxCxE->customer_address
+                 PHONE:$quotationxCxE->customer_phone    EMPLOYEE:$quotationxCxE->employee_name <br>"
+?>
+
+<form method="get" action="">
+<input type="hidden" name="controller" value="quotationxCxEs"/>
+<input type="hidden" name="Q_id" value="<?php echo $quotationxCxE->quotation_id  ; ?>"/>
+<button type="submit" name="action" value="index">Cancel</button>
+<button type="submit" name="action" value="deleteQuotation">Delete</button>
+</form>

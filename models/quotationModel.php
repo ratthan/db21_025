@@ -45,7 +45,7 @@ class quotation{
             $Q_percentsupport = $my_row[Q_percentsupport];
             $Q_successdate = $my_row[Q_successdate];
             $Q_deliverystatus = $my_row[Q_deliverystatus];
-            echo $Q_id."-".$C_id."-".$E_id."-".$Q_date."-".$Q_percent."-".$Q_dayperiod."-".$Q_allowperson."-".$Q_allowdate."-".$Q_percentsupport."-".$Q_successdate."-".$Q_deliverystatus."<br>";
+            //echo $Q_id."-".$C_id."-".$E_id."-".$Q_date."-".$Q_percent."-".$Q_dayperiod."-".$Q_allowperson."-".$Q_allowdate."-".$Q_percentsupport."-".$Q_successdate."-".$Q_deliverystatus."<br>";
             $quotationList[] = new quotation($Q_id,$C_id,$E_id,$Q_date,$Q_percent,$Q_dayperiod,$Q_allowperson,$Q_allowdate,$Q_percentsupport,$Q_successdate,$Q_deliverystatus);
         }
         require("connectionClose.php");

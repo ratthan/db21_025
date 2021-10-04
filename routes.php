@@ -1,7 +1,7 @@
 <?php 
 $controllers=array('pages'=>['home','error'],
 'productxProductPrices'=>['index','search','new','addProductPrice','updateForm','updateProductPrice','deleteForm','deleteProductPrice'],
-'quotationDetailxQxPxPCs'=>['index','search','new','addQuotationDetail'] ,
+'quotationDetailxQxPxPCs'=>['index','search','new','addQuotationDetail','updateForm','updateQuotationDetail','deleteForm','deleteQuotationDetail'] ,
 'quotationxCxEs'=>['index','newQuotation','search'] );
 function call($controller,$action){
    require_once("controllers/".$controller."Controller.php");//เปิดไฟล์controller
@@ -16,23 +16,23 @@ function call($controller,$action){
                                       $controller = new productxProductPriceController();      
         break;
 
-        case "quotationDetailxQxPxPCs": echo "111";
+        case "quotationDetailxQxPxPCs": echo "นายปรมัตถ์ ด้วงชู รหัสนิสิต 6220500661";
                                         require_once("models/quotationDetailxQxPxPCModel.php");
-                                        echo "222";
+                                        //echo "222";
                                         require_once("models/quotationDetailModel.php");
-                                        echo "333";
+                                        //echo "333";
                                         require_once("models/quotationModel.php");
-                                        echo "444";
+                                        //echo "444";
                                         require_once("models/productxProductColorModel.php");
                                         $controller = new quotationDetailxQxPxPCController();
-                                        echo "555";      
+                                        //echo "555";      
         break;
 
-        case "quotationxCxEs" : echo "sssss"; 
+        case "quotationxCxEs" : //echo "sssss"; 
                                 require_once("models/quotationxCxEModel.php");
                                 //require_once("./models/customerModel.php");
                                 //require_once("./models/employeeModel.php");
-                                echo "rrrr"; 
+                                //echo "rrrr"; 
                                 $controller = new quotationxCxEController();
         break;
 
